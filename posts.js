@@ -27,29 +27,42 @@ a lingua arca `
     date: "2026-05-30",
     title: "Um Vislumbre do gênio moribundo",
     body: `Me coço, rasgo este tecido que me cobre
+    
 É a ânsia pela troca de pele
 
 Eu posso, combustível de motivo nobre
+
 minha dança, minha prova, meu teste
 
 Acordo, no breu da minha angústia
+
 me ergo, suado e moribundo
 
 Acertos machucam
+
 Insônia, delírios e suor
 
 é tão difícil refazer escolhas tão difíceis
+
 se eu omito, dói em mim
+
 escolhas tão complexas
 
 Quero nascer de novo hoje
-ser aquele que eu nunca fui
+
+ser aquele que não ousei
+
 Meu bem me quer de bem comigo
-Ela que aduba o meu jardim
+
+quem aduba a minha raiz
+
 
 Quero morrer de novo hoje
+
 suportar a dor do meu adeus
+
 minha tristeza anda comigo
+
 sou condenado a ser feliz`
   },
   {
