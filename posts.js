@@ -19,21 +19,38 @@ window.POSTS = [
   {
     pinned: true,
     date: "2026-06-20",
-    title: "Por que documento tudo",
-    body: `Documentar não é sobre memória. É sobre autoria.
-
-Quando registro um projeto — o erro, a solução, o desperdício — eu assumo que aquilo foi meu. Num tempo em que quase tudo chega pronto e descartável, escrever o próprio processo é uma forma discreta de resistência.
-
-Este espaço é isso: um caderno de bancada deixado aberto.`
+    title: "Flambagem Verbal",
+    body: `Flambagem verbal
+a lingua arca `
   },
   {
     date: "2026-05-30",
-    title: "Precisão é uma forma de respeito",
-    body: `Aprendi mais tarde do que gostaria que apertar menos parafusos, com mais cuidado, quase sempre resolve.
+    title: "Um Vislumbre do gênio moribundo",
+    body: `Me coço, rasgo este tecido que me cobre
+É a ânsia pela troca de pele
 
-A tolerância certa não é a mais apertada — é a que o projeto pede. Vale para uma peça no torno e vale para uma frase.
+Eu posso, combustível de motivo nobre
+minha dança, minha prova, meu teste
 
-Fazer pouco, mas fazer inteiro.`
+Acordo, no breu da minha angústia
+me ergo, suado e moribundo
+
+Acertos machucam
+Insônia, delírios e suor
+
+é tão difícil refazer escolhas tão difíceis
+se eu omito, dói em mim
+escolhas tão complexas
+
+Quero nascer de novo hoje
+ser aquele que eu nunca fui
+Meu bem me quer de bem comigo
+Ela que aduba o meu jardim
+
+Quero morrer de novo hoje
+suportar a dor do meu adeus
+minha tristeza anda comigo
+sou condenado a ser feliz`
   },
   {
     date: "2026-05-12",
