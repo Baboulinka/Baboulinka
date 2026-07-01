@@ -33,4 +33,3 @@ Edite direto em `musica.html` (troque os `href="#"` e os textos).
 Edite `contato.html`: troque o email no `mailto:` e o número no link `wa.me`.
 
 ## Publicar no GitHub Pages
-Veja o passo a passo enviado no chat.
