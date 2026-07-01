@@ -17,22 +17,22 @@
 
 window.PROJETOS = [
   {
-    title: "Torno CNC de bancada",
-    caption: "Estrutura em alumínio · controle GRBL · fusos trapezoidais",
-    year: "2026",
+    title: "Las Babushkas",
+    caption: "jogadoras · basta ter caráter · fusos trapezoidais",
+    year: "1812",
     img: "images/babushka.png"
   },
   {
-    title: "Braço robótico impresso em 3D",
-    caption: "5 eixos · servos DS3218 · cinemática inversa em Python",
-    year: "2025",
-    img: ""
+    title: "Absorvedor de Impacto",
+    caption: "sistema de amortecimento para dispositivo de concreto · 1-3 elásticos · compatível com posca",
+    year: "2026",
+    img: "images/amortecedor1"
   },
   {
-    title: "Coletor solar térmico",
-    caption: "Serpentina de cobre · caixa isolada · ΔT ~ 38 °C",
-    year: "2025",
-    img: ""
+    title: "Grind Block - Jas eocaos",
+    caption: "para patins quad · rasgos de semiarcos ortogonais · PETG",
+    year: "2026",
+    img: "images/Grind_Block"
   },
   {
     title: "Sensor de vibração para máquinas",
