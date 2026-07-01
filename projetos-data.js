@@ -26,13 +26,13 @@ window.PROJETOS = [
     title: "Absorvedor de Impacto",
     caption: "sistema de amortecimento para dispositivo de concreto · 1-3 elásticos · compatível com posca",
     year: "2026",
-    img: "images/amortecedor1"
+    img: "images/amortecedor1.png"
   },
   {
     title: "Grind Block - Jas eocaos",
     caption: "para patins quad · rasgos de semiarcos ortogonais · PETG",
     year: "2026",
-    img: "images/Grind_Block"
+    img: "images/Grind_Block.png"
   },
   {
     title: "Sensor de vibração para máquinas",
