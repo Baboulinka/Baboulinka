@@ -20,7 +20,7 @@ window.PROJETOS = [
     title: "Torno CNC de bancada",
     caption: "Estrutura em alumínio · controle GRBL · fusos trapezoidais",
     year: "2026",
-    img: ""
+    img: "images/babushka.png"
   },
   {
     title: "Braço robótico impresso em 3D",
