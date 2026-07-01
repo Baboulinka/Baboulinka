@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Blog · Baboulinka</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="topbar">
+        <a href="index.html" class="brand">Baboulinka</a>
+        <nav class="nav">
+          <a href="blog.html" class="active">Blog</a>
+          <a href="projetos.html">Projetos</a>
+          <a href="musica.html">Música</a>
+          <a href="contato.html">Contato</a>
+        </nav>
+      </div>
+      <div class="page-head">
+        <p class="kicker">Caderno de bancada · reflexões</p>
+        <h1 class="page-title">Blog</h1>
+      </div>
+    </div>
+  </section>
+
+  <main class="wrap-narrow">
+    <div id="posts"></div>
+  </main>
+
+  <footer class="footer footer-narrow">
+    Para publicar, edite <span>posts.js</span>.
+  </footer>
+
+  <script src="posts.js"></script>
+  <script>
+    (function () {
+      var MESES = ['jan','fev','mar','abr','mai','jun','jul','ago','set','out','nov','dez'];
+      function fmt(iso) {
+        var p = String(iso || '').split('-');
+        if (p.length < 3) return iso || '';
+        return (+p[2]) + ' ' + MESES[(+p[1]) - 1] + ' ' + p[0];
+      }
+      function esc(s) {
+        return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+      }
+      var posts = (window.POSTS || []).slice().sort(function (a, b) {
+        return (b.pinned ? 1 : 0) - (a.pinned ? 1 : 0) ||
+               String(b.date || '').localeCompare(String(a.date || ''));
+      });
+      var root = document.getElementById('posts');
+
+      if (!posts.length) {
+        root.innerHTML = '<p style="font-size:16px;color:var(--muted)">Nenhum post ainda. Adicione entradas em <code>posts.js</code>.</p>';
+        return;
+      }
+
+      posts.forEach(function (p, i) {
+        var paras = String(p.body || '').split(/\n\s*\n/).map(function (s) { return s.trim(); }).filter(Boolean);
+        var art = document.createElement('article');
+        art.className = 'post';
+
+        var html = '';
+        if (p.pinned) html += '<div class="pin"><i></i><span>Fixado</span></div>';
+        html += '<div class="post-date">' + esc(fmt(p.date)) + '</div>';
+        html += '<h2 class="post-title">' + esc(p.title) + '</h2>';
+        html += '<div class="post-body" data-body></div>';
+        art.innerHTML = html;
+
+        var bodyEl = art.querySelector('[data-body]');
+        function render(expanded) {
+          var visible = (expanded || p.pinned) ? paras : paras.slice(0, 1);
+          bodyEl.innerHTML = visible.map(function (t) { return '<p>' + esc(t) + '</p>'; }).join('');
+          if (!p.pinned && paras.length > 1 && !expanded) {
+            var btn = document.createElement('button');
+            btn.className = 'readmore';
+            btn.textContent = 'ler mais →';
+            btn.addEventListener('click', function () { render(true); });
+            bodyEl.appendChild(btn);
+          }
+        }
+        render(false);
+        root.appendChild(art);
+      });
+    })();
+  </script>
+
+</body>
+</html>

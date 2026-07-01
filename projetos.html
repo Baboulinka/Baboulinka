@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Projetos · Baboulinka</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="topbar">
+        <a href="index.html" class="brand">Baboulinka</a>
+        <nav class="nav">
+          <a href="blog.html">Blog</a>
+          <a href="projetos.html" class="active">Projetos</a>
+          <a href="musica.html">Música</a>
+          <a href="contato.html">Contato</a>
+        </nav>
+      </div>
+      <div class="page-head">
+        <p class="kicker">Protótipos · registros técnicos</p>
+        <h1 class="page-title">Projetos</h1>
+      </div>
+    </div>
+  </section>
+
+  <main class="wrap">
+    <div class="grid" id="grid"></div>
+  </main>
+
+  <footer class="footer">
+    Cabem até 30 projetos · edite <span>projetos-data.js</span> e coloque as imagens na pasta <span>images/</span>.
+  </footer>
+
+  <script src="projetos-data.js"></script>
+  <script>
+    (function () {
+      function esc(s) {
+        return String(s == null ? '' : s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+      }
+      var list = window.PROJETOS || [];
+      var grid = document.getElementById('grid');
+
+      if (!list.length) {
+        grid.outerHTML = '<p style="font-size:16px;color:var(--muted)">Nenhum projeto ainda. Adicione itens em <code>projetos-data.js</code>.</p>';
+        return;
+      }
+
+      grid.innerHTML = list.map(function (p) {
+        var hasImg = !!(p.img && String(p.img).trim());
+        var thumb = hasImg
+          ? '<div class="thumb"><img src="' + esc(p.img) + '" alt="' + esc(p.title) + '"></div>'
+          : '<div class="thumb"><div class="thumb-empty"><span>images/ …</span></div></div>';
+        return '<article>' + thumb +
+          '<div class="card-head">' +
+            '<h2 class="card-title">' + esc(p.title) + '</h2>' +
+            '<span class="card-year">' + esc(p.year) + '</span>' +
+          '</div>' +
+          '<p class="card-cap">' + esc(p.caption) + '</p>' +
+        '</article>';
+      }).join('');
+    })();
+  </script>
+
+</body>
+</html>
